@@ -1,15 +1,15 @@
 pipeline {
-    agent any
+    agent slave
 
     stages {
         stage('Cloning Repo') {
             steps {
-                echo 'Cloning Github Repo'
+                git branch: 'main', credentialsId: 'a5b3dfb8-7286-4f55-a68b-1d849a1c46e9', url: 'https://github.com/babless1/webapp.git'
             }
         }
         stage('Build App') {
             steps {
-                echo 'Build the App'
+                sh 'clean package'
             }
         }
         stage('Code Review') {
