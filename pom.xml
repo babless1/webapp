@@ -22,10 +22,11 @@
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
 <dependency>
-    <groupId>org.sonarsource.scanner.maven</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
-    <version>3.9.1.2184</version>
-</dependency>
+           <groupId>org.sonarsource.sonarqube</groupId>
+           <artifactId>sonar-plugin-api</artifactId>
+           <version>7.9</version>
+           <scope>provided</scope>
+   </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
